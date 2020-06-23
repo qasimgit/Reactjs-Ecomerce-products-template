@@ -29,7 +29,7 @@ const App = () => {
       <Header />
       <div className='searchBar'>
         <label htmlFor="search">Search By Name</label>
-        <input type="text" size='50' onChange={ () => setSearch(() =>}/>
+        <input type="text" size='50' />
         
 
       </div>
