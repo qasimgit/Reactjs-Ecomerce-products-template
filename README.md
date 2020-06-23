@@ -1,7 +1,8 @@
 * React practice Project 1
 
 Using Basic and simple reactjs
-*Components
+
+Components
 Header
 products
 buttons
