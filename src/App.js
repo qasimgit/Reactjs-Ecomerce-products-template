@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Header, Content, Footer } from "./components";
+import { Header } from "./components";
 import { Products } from "./components/product/product";
 import "./app.css";
 import DB from "./db.json";
@@ -7,15 +7,19 @@ import DB from "./db.json";
 const App = () => {
   const [products, setProducts] = useState([]);
   const [activeButton, setActiveButton] = useState("");
+  const [search, setSearch] = useState("");
+
+
+
 
   useEffect(() => {
     setProducts(DB.Products);
   }, []);
 
   products.sort((a, b) => {
-    if (activeButton == "expensive") {
+    if (activeButton === "expensive") {
       return b.price - a.price;
-    } else if (activeButton == "cheapest") {
+    } else if (activeButton === "cheapest") {
       return a.price - b.price;
     }
   });
@@ -23,15 +27,21 @@ const App = () => {
   return (
     <div>
       <Header />
+      <div className='searchBar'>
+        <label htmlFor="search">Search By Name</label>
+        <input type="text" size='50' onChange={ () => setSearch(() =>}/>
+        
+
+      </div>
       <div className="btn_container">
         <button
-          className={activeButton == "expensive" ? "btn btn_active" : "btn"}
+          className={activeButton === "expensive" ? "btn btn_active" : "btn"}
           onClick={() => setActiveButton("expensive")}
         >
           Most Expensive
         </button>
         <button
-          className={activeButton == "cheapest" ? "btn btn_active" : "btn"}
+          className={activeButton === "cheapest" ? "btn btn_active" : "btn"}
           onClick={() => setActiveButton("cheapest")}
         >
           Cheapest
