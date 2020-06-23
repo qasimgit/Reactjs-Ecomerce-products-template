@@ -1,0 +1,15 @@
+.btn_container {
+    margin-bottom: 20px;
+}
+.btn {
+    width: auto;
+    padding:10px;
+    float: right;
+    background-color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.btn_active {
+    background-color: indigo;
+    color: #fff;
+}
