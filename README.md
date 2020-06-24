@@ -1,5 +1,7 @@
 # React Simple Ecommerce Products template (exclude checkout cart)
 
+![GitHub Logo](/react proj 1.JPG)
+
 ## Components
  * Using Basic and simple reactjs
  - Header
