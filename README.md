@@ -1,10 +1,16 @@
-* React practice Project 1
+# React Simple Ecommerce Products template (exclude checkout cart)
 
-Using Basic and simple reactjs
+(https://github.com/qasimgit/Reactjs-practice-project-1/react_proj_1.JPG)
 
-Components
-Header
-products
-buttons
+## Components
+ * Using Basic and simple reactjs
+ - Header
+ - Products
+ - Buttons
+ - Search Bar
 
-Sorting of products with prices(cheapset, expensives)
+## Functionalities
+
+ - Sorting of products with prices(cheapset, expensives)
+ - Searching Bar (searches products)
+ 
