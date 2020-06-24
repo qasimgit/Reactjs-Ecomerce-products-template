@@ -1,6 +1,6 @@
 # React Simple Ecommerce Products template (exclude checkout cart)
 
-![alt text](https://github.com/qasimgit/Reactjs-practice-project-1/react proj 1.JPG)
+(https://github.com/qasimgit/Reactjs-practice-project-1/react_proj_1.JPG)
 
 ## Components
  * Using Basic and simple reactjs
