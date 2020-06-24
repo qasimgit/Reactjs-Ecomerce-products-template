@@ -9,14 +9,11 @@ const App = () => {
   const [activeButton, setActiveButton] = useState("");
   const [search, setSearch] = useState("");
 
-
-
-
   useEffect(() => {
     setProducts(DB.Products);
   }, []);
 
-  products.sort((a, b) => {
+  let filteredData = products.sort((a, b) => {
     if (activeButton === "expensive") {
       return b.price - a.price;
     } else if (activeButton === "cheapest") {
@@ -24,14 +21,29 @@ const App = () => {
     }
   });
 
+  filteredData = products.filter((val) => {
+    if (search !== "") {
+      if (val.name.toLowerCase().search(search.toLowerCase()) !== -1) {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return true;
+    }
+  });
+  console.log('filteredData', filteredData)
+
   return (
     <div>
       <Header />
-      <div className='searchBar'>
+      <div className="searchBar">
         <label htmlFor="search">Search By Name</label>
-        <input type="text" size='50' />
-        
-
+        <input
+          type="text"
+          size="50"
+          onChange={(e) => setSearch(e.target.value)}
+        />
       </div>
       <div className="btn_container">
         <button
@@ -48,7 +60,7 @@ const App = () => {
         </button>
       </div>
       <div className="product_list">
-        {products.map((val, index) => (
+        {filteredData.map((val, index) => (
           <Products productData={val} key={index} />
         ))}
       </div>
