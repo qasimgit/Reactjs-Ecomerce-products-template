@@ -7,7 +7,7 @@ import DB from "./db.json";
 const App = () => {
   const [products, setProducts] = useState([]);
   const [activeButton, setActiveButton] = useState("");
-  const [search, setSearch] = useState("");git add .
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     setProducts(DB.Products);
