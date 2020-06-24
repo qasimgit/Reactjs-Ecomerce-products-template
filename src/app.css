@@ -1,5 +1,5 @@
 .btn_container {
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 .btn {
     width: auto;
@@ -22,5 +22,6 @@
 .searchBar input{
     margin-left: 10px;
     padding: 5px;
-    
+    margin-bottom: 50px;
+
 }
